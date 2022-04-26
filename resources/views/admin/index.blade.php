@@ -3,9 +3,6 @@
     <div class="container my-4">
         <div class="d-flex justify-content-between mb-3" style="height: 35px">
             <div class="input-group" style="width: auto">
-                {{-- <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Status</label>
-                </div> --}}
             </div>
             <form action="{{ route('createproduct') }}">
                 <button class="btn btn-info">Мәзір қосу</button>

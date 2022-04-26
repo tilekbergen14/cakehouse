@@ -10,14 +10,15 @@
             @enderror
             <div class="form-floating">
                 <input type="text" class="form-control @error('name') border border-danger @enderror mb-2" placeholder="Аты"
-                    name="name" value={{ old('name') }}>
+                    name="name" value={{ $product ? $product->name : old('name') }}>
             </div>
             @error('description')
                 <p class="text-start text-danger w-100 m-0" style="font-size: 14px">{{ $message }}</p>
             @enderror
             <div class="form-floating">
                 <input type="text" class="form-control @error('description') border border-danger @enderror mb-2"
-                    placeholder="Сипаттама" name="description" value={{ old('description') }}>
+                    placeholder="Сипаттама" name="description"
+                    value={{ $product ? $product->description : old('description') }}>
             </div>
             @error('category')
                 <p class="text-start text-danger w-100 m-0" style="font-size: 14px">{{ $message }}</p>
@@ -35,14 +36,14 @@
             @enderror
             <div class="form-floating">
                 <input type="text" class="form-control @error('price') border border-danger @enderror mb-2"
-                    placeholder="Бағасы" name="price" value={{ old('price') }}>
+                    placeholder="Бағасы" name="price" value={{ $product ? $product->price : old('price') }}>
             </div>
             @error('weight')
                 <p class="text-start text-danger w-100 m-0" style="font-size: 14px">{{ $message }}</p>
             @enderror
             <div class="form-floating">
                 <input type="text" class="form-control @error('weight') border border-danger @enderror mb-2"
-                    placeholder="Салмағы" name="weight" value={{ old('weight') }}>
+                    placeholder="Салмағы" name="weight" value={{ $product ? $product->weight : old('weight') }}>
             </div>
 
             @error('image')
@@ -55,7 +56,7 @@
                 @endif
                 <div class="form-floating">
                     <input type="file" class="form-control @error('image') border border-danger @enderror mb-2"
-                        placeholder="Сурет" name="image" value={{ old('image') }}>
+                        placeholder="Сурет" name="image" value={{ $product ? $product->image : old('image') }}>
                 </div>
             </div>
 
